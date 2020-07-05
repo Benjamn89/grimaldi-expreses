@@ -1,0 +1,156 @@
+.carrousel-section {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  max-height: 380px;
+  left: 0px;
+  top: 60vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+}
+.carrousel-section > svg {
+  position: absolute;
+  cursor: pointer;
+  height: 150px;
+  top: 150px;
+}
+.carrousel-section .carrousel-polygon2 {
+  right: -10px;
+}
+.carrousel-section .carrousel-polygon {
+  left: -10px;
+  transform: rotate(180deg);
+}
+.carrousel-section > svg:hover path {
+  fill-opacity: 1;
+}
+.carrousel-section p {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+}
+.carrousel-section h1 {
+  font-family: "Caveat", cursive;
+}
+
+.carrousel-polygon-off {
+  pointer-events: none;
+}
+
+.about-wrapper,
+.service-wrapper,
+.contact-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 0.7s;
+  width: 80%;
+}
+
+.section-in-left {
+  display: flex;
+  animation: sectionInLeft 0.7s linear forwards;
+}
+
+@keyframes sectionInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.section-in-right {
+  display: flex;
+  animation: sectionInRight 0.7s linear forwards;
+}
+
+@keyframes sectionInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.section-out-left {
+  animation: sectionOutLeft 0.7s linear forwards;
+}
+
+@keyframes sectionOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+.section-out-right {
+  animation: sectionOutRight 0.7s linear forwards;
+}
+
+@keyframes sectionOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .carrousel-section > svg {
+    height: 150px;
+    top: 150px;
+  }
+  .carrousel-section .carrousel-polygon {
+    left: -20px;
+  }
+  .carrousel-section .carrousel-polygon2 {
+    right: -20px;
+  }
+  .carrousel-section p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  .carrousel-section > svg {
+    height: 50px;
+    top: 10px;
+  }
+  .carrousel-section .carrousel-polygon {
+    left: 10%;
+  }
+  .carrousel-section .carrousel-polygon2 {
+    right: 10%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .carrousel-section {
+    position: relative;
+    height: auto;
+    min-height: 105vh;
+    top: 6vh;
+  }
+  .carrousel-section p {
+    font-size: 13pt;
+  }
+
+  .about-wrapper,
+  .service-wrapper,
+  .contact-wrapper {
+    height: unset;
+    position: relative;
+  }
+}

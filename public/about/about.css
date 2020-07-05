@@ -1,0 +1,31 @@
+.about-img-me {
+  height: 200px;
+}
+
+.car-about-text {
+  width: auto;
+  min-width: 45%;
+  color: #fff;
+  max-height: 80%;
+}
+.car-about-text > h1 {
+  margin-bottom: 20px;
+}
+.car-about-text > p {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  max-height: 180px;
+}
+
+@media only screen and (max-width: 930px) {
+  .about-img-me {
+    display: none;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .about-wrapper {
+    padding-top: 90px;
+    align-items: flex-start !important;
+  }
+}

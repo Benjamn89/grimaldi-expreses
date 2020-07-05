@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  transition: 0.3s;
+}
+.logo-div {
+  height: 5vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  img {
+    position: absolute;
+    top: -20px;
+    left: 5vw;
+  }
+  p {
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+  p::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: 0 100%;
+    transition: 0.3s;
+  }
+  p:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+header {
+  height: 90vh;
+  width: 100%;
+  background-image: url("/media/header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: lighter;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 8vh 0;
+  position: relative;
+}
+
+.header-h1 {
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+.header-btn-div {
+  padding: 17px 20px;
+  margin-top: 50px;
+  border-radius: 50px;
+  background: #26de81;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+  p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+}
+.header-btn-div:hover {
+  background: hsl(150, 59%, 70%);
+}

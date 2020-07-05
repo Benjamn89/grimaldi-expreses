@@ -1,0 +1,192 @@
+body,
+html {
+  overflow-x: hidden;
+  height: 100%;
+  max-height: 100vh;
+}
+
+img {
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  transition: 0.3s;
+}
+
+.logo-div {
+  height: 5vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-div img {
+  position: absolute;
+  top: -20px;
+  left: 5vw;
+}
+
+.logo-div p {
+  margin-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.logo-div p::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: 0 100%;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.logo-div p:hover::before {
+  transform: scaleX(1);
+}
+
+.logo-p-on {
+  pointer-events: none;
+}
+
+.logo-p-on::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: black;
+  transform: scaleX(1);
+  transform-origin: 0 100%;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.logo-wrap-list {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  height: auto;
+  min-height: 95vh;
+  width: 100%;
+  background-image: url("./media/header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: lighter;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 8vh 0;
+  position: relative;
+}
+
+.header-h1 {
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+
+.header-p {
+  text-align: center;
+}
+
+.header-btn-div {
+  padding: 17px 20px;
+  margin-top: 50px;
+  border-radius: 50px;
+  background: #26de81;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+}
+.header-btn-div > P {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+}
+
+.header-btn-div:hover {
+  background: #85e0b3;
+}
+
+.header-btn-div:hover p {
+  letter-spacing: 4px;
+}
+
+.sections-for-phone {
+  display: none;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.sections-for-phone > div {
+  width: 83px;
+  height: 37px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+}
+.sections-for-phone > div:hover {
+  background: linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.phone-on {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%),
+    rgba(0, 0, 0, 0.7) !important;
+}
+
+@media only screen and (max-width: 510px) {
+  body,
+  html {
+    height: 130%;
+    max-height: 150vh;
+  }
+
+  .logo-wrap-list {
+    display: none;
+  }
+
+  .logo-div img {
+    position: unset;
+    left: unset;
+    top: unset;
+  }
+
+  header {
+    min-height: 150vh;
+    padding: 2vh 0;
+  }
+
+  .header-btn-div {
+    margin-top: 25px;
+    padding: 10px 20px;
+  }
+
+  .sections-for-phone {
+    display: flex;
+  }
+}

@@ -1,0 +1,21 @@
+.service-wrapper {
+  color: #fff;
+  flex-direction: column;
+}
+
+.service-p-span {
+  font-size: 20px;
+  color: #26de81;
+}
+
+@media only screen and (max-width: 510px) {
+  .service-wrapper {
+    align-items: flex-start !important;
+  }
+  .service-wrapper > h1 {
+    margin: 25px 0 10px 0;
+  }
+  .service-wrapper > p {
+    margin-top: 15px !important;
+  }
+}

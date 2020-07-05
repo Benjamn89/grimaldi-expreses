@@ -1,0 +1,9 @@
+My name is Binyamin Tal
+And I am working at Allalouf LTD for 4 years now.
+Allalouf if the official representative of Grimaldi at Israel Since 1967.
+My role in Allalouf is an Operational representative, which meand, briefly,
+that i am physically meeting with all parties (Crew memberes, Port, Customs, tourists etc...).
+In more relevant words, I know how things work(moves) in practice.
+
+
+sass --watch carrousel/carrousel.scss:carrousel/carrousel.css index.scss:index.css about/about.scss:about/about.css service/service.scss:service/service.css contact/contact.scss:contact/contact.css
