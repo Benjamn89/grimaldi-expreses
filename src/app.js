@@ -5,17 +5,17 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 3000;
 const nodemailer = require("nodemailer");
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    xoauth2: xoauth2.createXOAuth2Generator({
-      user: "newbennytal@gmail.com",
-      clientId: "",
-      clientSecret: "",
-      refreshToken: "",
-    }),
-  },
-});
+// const transporter = nodemailer.createTransport({
+//   service: "gmail",
+//   auth: {
+//     xoauth2: xoauth2.createXOAuth2Generator({
+//       user: "newbennytal@gmail.com",
+//       clientId: "",
+//       clientSecret: "",
+//       refreshToken: "",
+//     }),
+//   },
+// });
 const mailOpt = {
   from: "bennytal@gmail.com",
   to: "newbennytal@gmail.com",
