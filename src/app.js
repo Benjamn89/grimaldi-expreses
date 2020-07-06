@@ -8,8 +8,12 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.NODEMAILER_USER,
-    pass: process.env.NODEMAILER_PASS,
+    xoauth2: xoauth2.createXOAuth2Generator({
+      user: "newbennytal@gmail.com",
+      clientId: "",
+      clientSecret: "",
+      refreshToken: "",
+    }),
   },
 });
 const mailOpt = {
