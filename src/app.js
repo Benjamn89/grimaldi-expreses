@@ -32,6 +32,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/console", (req, res) => {
+  console.log(process.env.NODEMAILER_USER);
+  console.log(process.env.NODEMAILER_PASS);
   // sgMail.setApiKey(
   //   "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"
   // );
