@@ -5,19 +5,36 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 3000;
 const nodemailer = require("nodemailer");
+const xoauth2 = require("xoauth2");
 // const transporter = nodemailer.createTransport({
 //   service: "gmail",
 //   auth: {
-//     xoauth2: xoauth2.createXOAuth2Generator({
-//       user: "newbennytal@gmail.com",
-//       clientId: "",
-//       clientSecret: "",
-//       refreshToken: "",
-//     }),
+//     user: "newbennytal@gmail.com",
+//     clientId:
+//       "534672942139-7b3jc811suniui3fci0ri16memfg2f1s.apps.googleusercontent.com",
+//     clientSecret: "UafOPCMrT_bYB5m0AHJlqQie",
+//     refreshToken:
+//       "1//048Ol5CbZOgmsCgYIARAAGAQSNwF-L9Ir0Ndodd0tENeJsKhydQGTqr6jTjLqvmNddah7N8MJd5pDcCXT0BnHWb_cqi50cF08-tg",
 //   },
 // });
+
+var transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  auth: {
+    type: "OAuth2",
+    user: "newbennytal@gmail.com",
+    clientId:
+      "534672942139-7b3jc811suniui3fci0ri16memfg2f1s.apps.googleusercontent.com",
+    clientSecret: "UafOPCMrT_bYB5m0AHJlqQie",
+    refreshToken:
+      "1//048Ol5CbZOgmsCgYIARAAGAQSNwF-L9Ir0Ndodd0tENeJsKhydQGTqr6jTjLqvmNddah7N8MJd5pDcCXT0BnHWb_cqi50cF08-tg",
+  },
+});
+
 const mailOpt = {
-  from: "bennytal@gmail.com",
+  from: "newbennytal@gmail.com",
   to: "newbennytal@gmail.com",
   subject: "Test Nodemailer",
   text: "This is plain text",
@@ -36,8 +53,6 @@ app.get("/", (req, res) => {
 });
 
 app.post("/console", (req, res) => {
-  console.log(process.env.NODEMAILER_USER);
-  console.log(process.env.NODEMAILER_PASS);
   // sgMail.setApiKey(
   //   "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"
   // );
