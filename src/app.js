@@ -22,7 +22,7 @@ var transporter = nodemailer.createTransport({
 });
 
 const mailOpt = {
-  from: "newbennytal@gmail.com",
+  from: "minaynashdod@gmail.com",
   to: "newbennytal@gmail.com",
   subject: "Test Nodemailer",
   text: "This is plain text",
